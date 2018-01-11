@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Peoplechain</title>
+  </head>
+  <body>
+    <a href="">Edit Profile</a>
+    <b></b>
+    <p>
+      Name: <span id="name"></span>
+    </p>
+    <p>
+      Address: <span id="address"></span>
+    </p>
+    <p>
+      Balance: <span id="balance"></span>
+    </p>
+    <p>
+      User Type: <span id="user_type"></span>
+    </p>
+    <h3>
+      Endorsements: <div id="endorsements">
+
+      </div>
+    </h3>
+    <h3>
+      Endorsement Requests: <div id="endorsement_requests">
+        <form action="/endorsement" id="endorsement_requests_form" method="post" accept-charset="utf-8" enctype="application/x-www-form-urlencoded">
+
+        </form>
+      </div>
+    </h3>
+    <form action="/endorsement/request" method="post" accept-charset="utf-8" enctype="application/x-www-form-urlencoded">
+      <h3>Request Endorsement</h3>
+      <input type="text" name="address" placeholder="Enter address of endorser"/ name="address">
+      <input type="submit" value="Request Endorsement" />
+    </form>
+
+  </body>
+</html>
