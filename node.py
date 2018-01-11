@@ -132,10 +132,7 @@ class Node:
 
 
     def get_my_node(self):
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect(('8.8.8.8', 80))
-        my_node = s.getsockname()[0]
-        s.close()
+        my_node = requests.get('https://api.ipify.org').text
         return my_node
 
     def add_node(self, node):
